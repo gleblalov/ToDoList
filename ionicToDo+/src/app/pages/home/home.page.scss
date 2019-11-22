@@ -1,0 +1,86 @@
+.header{
+    position: relative;
+}
+.header-inputSearch{
+    width: 190px;
+    position: absolute;
+    top: -10px;
+    left: 25%;
+    z-index: 10;
+}
+.header-inputSearch-toogle{
+    display: none;
+}
+
+.header-title-hover{
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    z-index: 100;
+}
+
+.header-iconSearch{
+    position: absolute;
+    top: -5px;
+    right: 48px;
+    z-index: 1;
+}
+
+.header-iconPerson{
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    z-index: 1;
+}
+
+.content{
+    position: relative;
+}
+
+.button-addTask{   
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    z-index: 1;
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.template{
+    margin-top: 50%;
+    padding-left: 25%;
+}
+
+.temlate-image{
+    width: 200px;
+    height: auto;
+    opacity: .4;
+}
+
+.template-text{
+    font-size: 20px;
+    font-weight: bold;
+    opacity: .6;
+    margin-left: 25px;
+}
+
+.footer{
+    position: relative;
+}
+
+.footer-input{
+    width: 240px;
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    z-index: 10;
+}   
+
+.footer-icon{
+    position: absolute;
+    top: -17px;
+    right: 10px;
+    z-index: 1;
+}
+

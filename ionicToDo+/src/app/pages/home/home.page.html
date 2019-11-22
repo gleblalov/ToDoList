@@ -1,0 +1,83 @@
+<ion-header >
+    <ion-toolbar color="primary" >
+      <ion-title class="header" >
+          <ion-text color="">ToDo</ion-text> 
+          <ion-input placeholder="Search..." class="header-inputSearch" 
+          [style.display]="isOpenInputSearch==true?'block':'none'"
+          [(ngModel)]="inputSearch"
+          autofocus="true"
+          (ionChange)="filterTasksByTitle()"></ion-input>
+          <ion-icon name="search" (click)="openInputSearch()" size="large" class="header-iconSearch"></ion-icon>
+          <ion-icon ios="md-person" md="md-person" size="large" class="header-iconPerson" (click)="openUserDetails()"></ion-icon>    
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content color="light" class="content">
+      <ion-refresher slot="fixed" pullFactor="0.6" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+      <ion-list *ngIf="tasksFilter.length, else noTasks">   
+        <ion-item *ngFor="let task of tasksFilter">
+          <div>
+              <ion-checkbox slot="start" [checked]="task.isDone" (ionChange)="changeStateDone(task)"></ion-checkbox>
+          </div>
+          <ion-label>{{task.title}}</ion-label>
+          <ion-icon name="create"  color="primary" (click)="openDetails(task)" size="large"></ion-icon>   
+          <ion-icon (click)="deleteTask(task)" name="close-circle" color="danger" size="large" ></ion-icon>
+        </ion-item>
+      </ion-list>
+
+      <!-- <ion-button color="primary"  (click)="createDB()"
+       size="default" shape="round">
+          createDB
+      </ion-button>
+
+      <ion-button color="primary"  (click)="createTable()"
+       size="default" shape="round">
+        createTable
+      </ion-button> -->
+
+      <ion-button color="primary"  (click)="sql.insertRow(task)"
+       size="default" shape="round">
+       insertRow
+      </ion-button>
+
+      <ion-button color="primary"  (click)="sql.getRows(userID)"
+       size="default" shape="round">
+       getRows
+      </ion-button>
+
+      <ion-button color="primary"  (click)="sql.dropDB()"
+      size="default" shape="round">
+      dropDB
+     </ion-button>
+
+      <ion-button color="primary" class="button-addTask" (click)="openAddTaskPage()"
+       size="default" shape="round">
+          <ion-icon name="add" size="large" ></ion-icon>
+      </ion-button>
+
+      <ion-button color="primary"  (click)="networkTest()"
+       size="default" shape="round">
+       NETWORK
+      </ion-button>
+  
+      <ng-template #noTasks >
+        <div class="template">
+          <ion-img src="../../assets/hamack.png" class='temlate-image'></ion-img>
+        </div>
+      </ng-template> 
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="primary">
+      <ion-title class="footer">
+          <ion-input class="footer-input" placeholder="Enter the task here..."
+          [(ngModel)]="inputTitle" name="inputAddTask"
+          (keydown.enter)="addTask()"
+          ></ion-input>
+          <span><ion-icon (click)="addTask()" name="checkmark" size="large" class="footer-icon"></ion-icon></span>        
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>

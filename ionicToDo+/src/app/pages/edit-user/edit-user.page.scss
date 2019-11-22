@@ -1,0 +1,33 @@
+.header{
+    position: relative;
+}
+
+.header-back{
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    z-index: 1;
+}
+
+.content{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content-user{
+    font-size: 34px;
+}
+
+.avatar{
+    margin-left: 148px;
+}
+
+.tasks-section{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.content-task{
+    font-size: 25px;
+}
+

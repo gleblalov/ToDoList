@@ -1,0 +1,40 @@
+.header{
+    position: relative;
+}
+
+.header-back{
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
+    z-index: 1;
+}
+
+.header-label{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+.header-add{
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+    z-index: 1;
+}
+
+.content-div{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.content-input{
+    width: 80%;
+    border-bottom: 1px solid #333;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 46vh;
+  }

@@ -1,0 +1,52 @@
+.header{
+    position: relative;
+}
+
+.header-back{
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    z-index: 1;
+}
+
+.content-div{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.content-input{
+    width: 80%;
+    border-bottom: 1px solid #333;
+}
+
+.content-section{
+    margin-top: 25px;
+}
+
+.content-google{
+    margin-top: 40px;
+}
+
+.template{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.template-user{
+    font-size: 40px;
+}
+
+.tasks-section{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.template-task{
+    font-size: 25px;
+}
+
+.reg-label{
+    font-size: 18px;
+    opacity: 0.6;
+    
+}

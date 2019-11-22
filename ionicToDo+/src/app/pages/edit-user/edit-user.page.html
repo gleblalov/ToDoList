@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title class="header" >
+        <ion-text color="">ToDo</ion-text>
+        <ion-icon name="arrow-back" [routerLink]="['/home']"  size="large" class="header-back"></ion-icon>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-avatar >
+      <img [src]="image" class="avatar">
+    </ion-avatar>
+    <ion-text class="content-user" color="primary">{{login}}</ion-text><br>
+    <section class="tasks-section">
+        <ion-text class="content-task" color="primary">Tasks of all: {{quantityTasksAll}} </ion-text><br>
+        <ion-text class="content-task" color="primary">Tasks completed: {{quantityTasksCompleted}}</ion-text><br>
+    </section>
+    <section class="content-section">
+        <ion-button expand="block" color="danger" (click)="logout()">Log out</ion-button>
+    </section>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="contact"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button (click)="camera()"><ion-icon name="camera"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="end">
+      <ion-fab-button (click)="gallery()"><ion-icon name="photos"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title class="footer">
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+

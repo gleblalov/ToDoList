@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+      <ion-title class="header" >
+        <ion-text color="">ToDo</ion-text>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div>
+    <div class="content-div"> 
+        <ion-text class="content-label" autofocus="true" 
+        spellcheck="true" color="primary">Login</ion-text>
+        <ion-input [(ngModel)]="login" class="content-input" placeholder="Enter a login..."></ion-input>
+    </div>
+  
+    <div class="content-div">
+        <ion-text class="content-label" color="primary">Password</ion-text>
+        <ion-input [(ngModel)]="password" class="content-input" type="password" placeholder="Enter a password..."></ion-input>
+    </div> 
+    
+    <section class="content-section">
+      <ion-button expand="block" (click)="signIn()">Sign in</ion-button>
+    </section>
+
+    <section class="section-registr">
+        <ion-label  [routerLink]="['/registr']">Don`t have an account?</ion-label>
+    </section> 
+
+    <section class="section-social">
+      <ion-icon class="social-icon" ios="logo-facebook" md="logo-facebook" (click)="fbLogin()"></ion-icon>
+      <ion-icon class="social-icon social-icon-google" ios="logo-google" md="logo-google" (click)="googleSignIn()"></ion-icon>
+    </section>
+  </div>
+  
+</ion-content>
+
+
+<ion-footer>
+  <!-- <ion-toolbar color="primary">
+    <ion-title class="footer">
+    </ion-title>
+  </ion-toolbar> -->
+</ion-footer>

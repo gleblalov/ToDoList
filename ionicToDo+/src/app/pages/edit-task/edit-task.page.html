@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title class="header">
+          <ion-icon name="arrow-back" [routerLink]="['/home']" size="large" class="header-back"></ion-icon>
+          <ion-label class="header-label">Edit task</ion-label>
+          <ion-icon  (click)='saveEditTask()' name="checkmark" size="large" class="header-add"></ion-icon>
+        </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="content-div"> 
+        <ion-text class="content-label" autofocus="true" 
+        spellcheck="true" color="primary">What should be done?</ion-text>
+        <ion-input  class="content-input" [(ngModel)]="task.title" readonly placeholder="{{task.title}}"></ion-input>
+    </div>
+  
+    <div class="content-div">
+        <ion-text class="content-label" color="primary">Description</ion-text>
+        <ion-input [(ngModel)]="task.describe" class="content-input" placeholder="{{placeholderInputDescribe()}}"></ion-input>
+    </div>
+
+    <ion-toggle [checked]="task.isDone" (ionChange)="changeIsDone()" color="primary"></ion-toggle>   
+    
+</ion-content>
+<div #map_canvas id="map_canvas"></div>
+
+
+<ion-footer>
+    <ion-toolbar color="primary">
+        <ion-title class="footer">            
+        </ion-title>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="header">
+      <ion-icon name="arrow-back" [routerLink]="['/home']" size="large" class="header-back"></ion-icon>
+      <ion-label class="header-label">New task</ion-label>
+      <ion-icon (click)="addTask()" name="checkmark" size="large" class="header-add"  ></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="light">
+  <div class="content-div"> 
+      <ion-text class="content-label" autofocus="true" 
+      spellcheck="true" color="primary">What should be done?</ion-text>
+      <ion-input [(ngModel)]="inputTitle" class="content-input" placeholder="Enter the task here..."></ion-input>
+  </div>
+
+  <div class="content-div">
+      <ion-text class="content-label" color="primary">Description</ion-text>
+      <ion-input [(ngModel)]="inputDescribe" class="content-input" placeholder="Enter a description..."></ion-input>
+  </div>     
+</ion-content>
+<div #map_canvas id="map_canvas"></div>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title class="footer"> 
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

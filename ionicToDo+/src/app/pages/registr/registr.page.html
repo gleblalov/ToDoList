@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+      <ion-title class="header" >
+        <ion-text color="">ToDo</ion-text>
+        <ion-icon name="arrow-back" [routerLink]="['/auth']" size="large" class="header-back"></ion-icon>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div>
+    <div class="content-div"> 
+        <ion-text class="content-label" autofocus="true" spellcheck="true" color="primary">Login</ion-text>
+        <ion-input [(ngModel)]="login" class="content-input" placeholder="Enter a login..."></ion-input>
+    </div>
+  
+    <div class="content-div">
+        <ion-text class="content-label" color="primary" >Password</ion-text>
+        <ion-input [(ngModel)]="password" class="content-input" type="password" placeholder="Enter a password..."></ion-input>
+    </div> 
+
+    <div class="content-div">
+      <ion-text class="content-label" color="primary">Email</ion-text>
+      <ion-input [(ngModel)]="email" class="content-input" type="email" placeholder="Enter a email..."></ion-input>
+    </div> 
+
+    <div class="content-div"> 
+      <ion-text class="content-label" color="primary">Name</ion-text>
+      <ion-input [(ngModel)]="name" class="content-input" placeholder="Enter a name..."></ion-input>
+  </div>
+    
+    <section class="content-section">
+      <ion-button expand="block" (click)="registration()">Registration</ion-button>
+    </section> 
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <!-- <ion-toolbar color="primary">
+    <ion-title class="footer">
+    </ion-title>
+  </ion-toolbar> -->
+</ion-footer>
